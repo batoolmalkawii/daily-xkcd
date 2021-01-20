@@ -1,19 +1,16 @@
+import styles from '../../styles.module.css'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import Link from 'next/link'
 
 export default function ComicDetails(props) {
     return (
         <>
-            <div className="details">
-                <nav>
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-                    <Link href="/about">
-                        <a>About</a>
-                    </Link>
-                </nav>
-                <h1>{props.singleComic.title}</h1>
-                <img src={props.singleComic.img}></img>
+            <div className={styles.hello}>
+                <Header />
+                <h2>{props.singleComic.title}</h2>
+                <img src={props.singleComic.img} />
+                <Footer/>
             </div>
         </>
     )
